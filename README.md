@@ -5,8 +5,8 @@
 ---
 
 
-github : https://github.com/panach/copycat
-notion : https://www.notion.so/panach/copyCat-2fdb799a0f994037b479640ba4cf6312
+- github : https://github.com/panach/copycat
+- notion : https://www.notion.so/panach/copyCat-2fdb799a0f994037b479640ba4cf6312
 
 ## 대상
 - html, scss, svg 등의 UI 인터렉션을 분석할 만한 대상
