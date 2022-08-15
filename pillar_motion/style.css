@@ -1,5 +1,72 @@
+:root {
+  --c-body: #2f3640;
+  --c-pillar-start: #f5f5f5;
+  --s-pillar-top: 50px;
+  --s-pillar-body: 100px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: var(--c-body);
+}
+
+.box {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pillar {
+  position: absolute;
+  width: var(--s-pillar-top);
+  height: var(--s-pillar-top);
+  background-color: #ff2323;
+}
+
+.pillar::before, .pillar::after {
+  content: "";
+  position: absolute;
+  top: var(--s-pillar-top);
+  width: var(--s-pillar-top);
+  height: var(--s-pillar-body);
+  background-color: gray;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.pillar::after {
+  -webkit-transform: rotate(90deg) translate(calc(var(--s-pillar-top)/2*-1), calc(var(--s-pillar-top)/2));
+          transform: rotate(90deg) translate(calc(var(--s-pillar-top)/2*-1), calc(var(--s-pillar-top)/2));
+  background-color: blue;
+}
+
+.pillar_inner {
+  position: absolute;
+  bottom: var(--s-pillar-top);
+  width: var(--s-pillar-top);
+  height: var(--s-pillar-body);
+  background-color: yellow;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.pillar_inner::before {
+  content: "";
+  position: absolute;
+  left: var(--s-pillar-top);
+  width: var(--s-pillar-top);
+  height: var(--s-pillar-body);
+  -webkit-transform: rotate(90deg) translate(calc(var(--s-pillar-top)*1.5), calc(var(--s-pillar-top)/2*-1));
+          transform: rotate(90deg) translate(calc(var(--s-pillar-top)*1.5), calc(var(--s-pillar-top)/2*-1));
+  background-color: purple;
 }
 /*# sourceMappingURL=style.css.map */
